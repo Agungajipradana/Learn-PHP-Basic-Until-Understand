@@ -143,19 +143,21 @@ In this repository, you will learn PHP from the basics to a level where you can 
 
 ## 📂 Repository Structure
 
+```bash
 Learn-PHP-Basic-Until-Understand/
 ├── 1.Introduction-to-PHP/
 ├── 2.Data-Type/
-├── boolean.php
-├── number.php/
-├── string.php/
+  ├── boolean.php
+  ├── number.php/
+  ├── string.php/
 ├── 3.Function/
-├── Built-in-function
-├── built-in-function-boolean.php/
-├── built-in-function-number.php/
-├── built-in-function-string.php/
-├── Function-in-php
+  ├── Built-in-function
+    ├── built-in-function-boolean.php/
+    ├── built-in-function-number.php/
+    ├── built-in-function-string.php/
+  ├── Function-in-php
 └── README.md
+```
 
 ---
 
