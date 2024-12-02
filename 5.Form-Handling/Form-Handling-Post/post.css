@@ -1,0 +1,113 @@
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Global settings */
+  body {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(
+      135deg,
+      #6a11cb,
+      #2575fc
+    ); /* Gradient background */
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+  }
+  
+  /* Centering the form with a stylish background */
+  form {
+    background-color: #fff;
+    padding: 40px 40px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 450px;
+    text-align: left;
+  }
+  
+  /* Heading style for the title */
+  h2 {
+    font-size: 28px;
+    text-align: center;
+    color: #4caf50;
+    font-weight: bold;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    padding-top: 10px;
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(45deg, #ff6f00, #ffcc00);
+    -webkit-background-clip: text;
+    color: transparent;
+  }
+  
+  /* Label styling */
+  label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 14px;
+    color: #555;
+    font-weight: 500;
+  }
+  
+  /* Input field styling */
+  input[type="text"],
+  input[type="email"],
+  input[type="password"] {
+    width: 100%;
+    padding: 14px;
+    margin-bottom: 20px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+    color: #333;
+    transition: border 0.3s ease;
+    background-color: #f9f9f9;
+  }
+  
+  /* Focus effect for input fields */
+  input[type="text"]:focus,
+  input[type="email"]:focus,
+  input[type="password"]:focus {
+    border-color: #4caf50;
+    outline: none;
+    background-color: #eef9e7;
+  }
+  
+  /* Button styling */
+  button {
+    width: 100%;
+    padding: 14px;
+    background-color: #4caf50;
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  
+  /* Button hover effect */
+  button:hover {
+    background-color: #45a049;
+  }
+  
+  /* Responsive design: adjust form for smaller screens */
+  @media (max-width: 480px) {
+    form {
+      padding: 20px;
+      width: 90%;
+    }
+    h2 {
+      font-size: 24px;
+    }
+  }
+  
