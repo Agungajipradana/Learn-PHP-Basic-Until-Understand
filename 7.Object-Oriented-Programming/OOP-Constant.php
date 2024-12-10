@@ -87,33 +87,40 @@ echo "\n\n";
 
 echo "-------------------- OOP Constant In Interface --------------------" . "\n\n";
 
-// Constant dalam interface bersifat public secara default.
-
+// Interface `Status` berfungsi untuk mendeklarasikan constant yang dapat digunakan di class mana pun yang mengimplementasikan interface ini.
+// Constant dalam interface secara default bersifat public dan tidak bisa diubah.
 interface Status
 {
-    const PENDING = "pending";
-    const APPROVED = "approved";
-    const REJECTED = "rejected";
+    const PENDING = "pending"; // Constant untuk status "pending"
+    const APPROVED = "approved"; // Constant untuk status "approved"
+    const REJECTED = "rejected"; // Constant untuk status "rejected"
 }
 
+// Class `Order` mengimplementasikan interface `Status`.
+// Ini berarti class ini dapat menggunakan constant yang didefinisikan dalam interface.
 class Order implements Status
 {
+    // Metode `getOrderStatus` untuk mengembalikan pesan berdasarkan status yang diterima.
     public function getOrderStatus($status)
     {
+        // Gunakan switch untuk memeriksa nilai status yang diterima.
         switch ($status) {
-            case self::PENDING:
-                return "The order is pending.";
-            case self::APPROVED:
-                return "The order is approved.";
-            case self::REJECTED:
-                return "The order is rejected.";
-            default:
-                return "Unknown status.";
+            case self::PENDING: // Memeriksa jika status adalah "pending".
+                return "The order is pending."; // Mengembalikan pesan untuk status "pending".
+            case self::APPROVED: // Memeriksa jika status adalah "approved".
+                return "The order is approved."; // Mengembalikan pesan untuk status "approved".
+            case self::REJECTED: // Memeriksa jika status adalah "rejected".
+                return "The order is rejected."; // Mengembalikan pesan untuk status "rejected".
+            default: // Jika status tidak cocok dengan nilai constant.
+                return "Unknown status."; // Mengembalikan pesan untuk status yang tidak dikenal.
         }
     }
 }
 
+// Membuat objek dari class `Order`.
 $order = new Order();
+// Memanggil metode `getOrderStatus` dengan parameter `Status::APPROVED`.
+// `Status::APPROVED` merujuk ke constant "approved" dari interface `Status`.
 echo $order->getOrderStatus(Status::APPROVED); // Output: The order is approved.
 
 echo "\n\n";
@@ -145,4 +152,89 @@ Keuntungan Menggunakan Constant
 /*
 Kesimpulan
 Constant dalam OOP PHP digunakan untuk mendefinisikan nilai tetap yang sering digunakan secara konsisten dalam aplikasi. Constant dapat memiliki berbagai tingkat aksesibilitas (public, protected, private) dan digunakan baik dalam class, subclass, maupun interface untuk meningkatkan fleksibilitas dan keamanan kode.
+*/
+
+echo "-------------------- OOP Constant Menggunakan static:: untuk Late Static Binding --------------------" . "\n\n";
+
+/*
+Jika Anda ingin mengakses constant dalam konteks inheritance, gunakan static:: untuk mendukung late static binding.
+*/
+
+// Mendeklarasikan class parent (Animal) dengan constant CATEGORY
+class Animal
+{
+    const CATEGORY = "Animal";
+
+    // Metode statis untuk mengembalikan constant CATEGORY menggunakan static::
+    public static function getCategory()
+    {
+        return static::CATEGORY; // Menggunakan static:: untuk mendukung late static binding
+    }
+}
+
+// Mendeklarasikan class turunan (Dog) yang mewarisi class Animal
+class Dog extends Animal
+{
+    const CATEGORY = "Dog"; // Mendeklarasikan constant CATEGORY yang akan mengoverride milik class parent
+}
+
+// Late static binding
+// Memanggil metode getCategory() dari class Dog
+// Karena menggunakan static::, constant CATEGORY milik class Dog akan diakses
+echo Dog::getCategory(); // Output: Dog
+
+echo "\n\n";
+
+echo "-------------------- OOP Constant Menggunakan parent:: --------------------" . "\n\n";
+
+// Mendefinisikan class Vehicle yang menjadi parent class.
+class Vehicle
+{
+    // Constant TYPE didefinisikan di class Vehicle dengan nilai "General Vehicle".
+    const TYPE = "General Vehicle";
+
+    // Method showType akan mengembalikan nilai constant TYPE menggunakan self::.
+    public function showType()
+    {
+        return self::TYPE; // Merujuk ke constant TYPE di class Vehicle.
+    }
+}
+
+// Mendefinisikan class Car yang merupakan subclass dari Vehicle.
+class Car extends Vehicle
+{
+    // Constant TYPE didefinisikan di class Car dengan nilai "Car".
+    const TYPE = "Car";
+
+    // Method showParentType akan mengembalikan nilai constant TYPE di parent class menggunakan parent::.
+    public function showParentType()
+    {
+        return parent::TYPE; // Secara eksplisit merujuk ke constant TYPE di class Vehicle.
+    }
+}
+
+// Membuat objek dari class Car.
+$car = new Car();
+
+// Memanggil method showType() dari objek $car.
+// Karena showType() didefinisikan di class Vehicle dan menggunakan self::TYPE,
+// maka self::TYPE merujuk ke constant TYPE yang didefinisikan di class Vehicle.
+// Output: General Vehicle
+echo $car->showType() . "\n";
+
+// Memanggil method showParentType() dari objek $car.
+// Method showParentType() menggunakan parent::TYPE, sehingga secara eksplisit 
+// merujuk ke constant TYPE di class Vehicle (parent class).
+// Output: General Vehicle
+echo $car->showParentType() . "\n";
+
+echo "\n\n";
+
+/*
+Kapan Harus Menggunakan Constant?
+Gunakan constant ketika:
+
+    1. Anda memiliki nilai tetap yang tidak berubah, seperti API key, konfigurasi, atau pengenal tertentu.
+    2. Anda ingin menghindari penggunaan variabel global untuk nilai statik.
+    3. Anda ingin nilai tersebut dapat diakses di seluruh class atau turunan tanpa memerlukan instance.
 */
