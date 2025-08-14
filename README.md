@@ -1,143 +1,143 @@
 # 🚀 Learn PHP Basic Until Understand 💡
 
-Welcome to **Learn PHP Basic Until Understand**, a repository designed to help you master PHP from the basics to full understanding! 🎯
+Welcome to **Learn PHP Basic Until Understand**, a repository designed to help you master PHP from the fundamentals to a solid understanding! 🎯
 
-PHP is one of the most popular server-side programming languages used for building dynamic web applications. With this repository, you will:
+PHP is one of the most popular server-side programming languages for building dynamic web applications.
+With this repository, you will:
 
-- 📖 Understand the fundamental concepts of PHP.
-- 🛠️ Apply frequently used PHP built-in functions.
-- 💡 Learn through practical examples that are easy to follow.
+- 📖 Understand PHP's core concepts.
+- 🛠️ Learn and practice commonly used PHP built-in functions.
+- 💡 Follow practical and easy-to-understand examples.
 - ✅ Build a strong foundation for web development.
 
 ---
 
 ## 📚 What Will You Learn?
 
-In this repository, you will learn PHP from the basics to a level where you can apply your knowledge confidently. Here's a breakdown of what you'll be exploring:
+Here’s the learning path following the repository folder structure:
 
 ---
 
-### 1. **Introduction to PHP**
+### 01. **Introduction to PHP**
 
 - What is PHP?
 - Running your first PHP code.
+- PHP tags (`<?php ... ?>`).
 
 ---
 
-### 2. **Data Types**
+### 02. **Data Type**
 
-- **String**: Understanding string operations and functions.
-- **Number**: Working with integers, floats, and their operations.
-- **Boolean**: True/false values and their use cases.
-- **Array**: Indexed arrays, associative arrays, and multidimensional arrays.
+- **String**, **Number**, **Boolean**, **Array**, **Object**, **NULL**, **Resource**.
+- Explanation and usage examples.
 
 ---
 
-### 3. **Functions**
+### 03. **String**
 
-- **Basic Functions**: How to define and call functions with parameters and return values.
-- **Built-in Functions**:
-  - String functions: `strlen`, `str_replace`, `substr`.
-  - Array functions: `array_merge`, `array_push`, `array_filter`.
-  - Math functions: `round`, `abs`, `pow`, `rand`.
-- **Variable Scope**: Understanding local, global, and static variables.
+- String manipulation functions (`strlen`, `str_replace`, `substr`).
+- String concatenation and interpolation.
 
 ---
 
-### 4. **Control Structures**
+### 04. **Number**
 
-- **Conditional Statements**: Using `if`, `else`, `elseif`, and `switch` to control program flow.
-- **Loops**: `for`, `while`, `do-while`, and `foreach` loops for iterating through data.
-- **Include and Require**: Including files with `include` and `require` statements.
-
----
-
-### 5. **Form Handling**
-
-- **Form Submission**: Handling user input using `$_GET` and `$_POST`.
-- **Data Validation**: Ensuring valid user data.
-- **Sanitizing Data**: Preventing XSS attacks with `htmlspecialchars`.
-- **File Uploads**: Handling file uploads using `$_FILES`.
+- Integers and floats.
+- Basic arithmetic operations.
+- Built-in number functions (`round`, `abs`, `pow`).
 
 ---
 
-### 6. **Array Manipulation**
+### 05. **Casting**
 
-- **Simple Arrays**: Indexed and associative arrays.
-- **Multidimensional Arrays**: Understanding and working with nested arrays.
-- **Array Functions**: Using `sort`, `count`, `array_keys`, and `array_values` for manipulating arrays.
-
----
-
-### 7. **Object-Oriented Programming (OOP)**
-
-- **OOP Basics**: Classes, objects, properties, and methods.
-- **Core OOP Concepts**: Inheritance, polymorphism, abstraction, and encapsulation.
-- **Magic Methods**: Working with magic methods like `__construct`, `__destruct`, `__toString`, `__get`, and `__set`.
+- Changing data types (`(int)`, `(float)`, `(string)`).
+- PHP type juggling.
 
 ---
 
-### 8. **Database Connection**
+### 06. **Math**
 
-- **Connecting to Databases**: Using MySQLi and PDO to connect to a database.
-- **CRUD Operations**: Performing Create, Read, Update, and Delete operations with PHP and MySQL.
-- **Prepared Statements**: Preventing SQL Injection using prepared statements.
-
----
-
-### 9. **Error Handling**
-
-- **Error Types**: Understanding syntax errors, runtime errors, and logical errors.
-- **Error Reporting**: Using `error_reporting()` and `ini_set` to handle errors.
-- **Try-Catch**: Handling exceptions with `try-catch` blocks.
+- Mathematical functions (`max`, `min`, `sqrt`, `rand`).
+- Advanced math operations.
 
 ---
 
-### 10. **PHP for Web Development**
+### 07. **Constant**
 
-- **Sessions and Cookies**: Storing temporary and persistent data.
-- **Routing**: Creating a basic routing system.
-- **Template Engines**: Using template engines like Blade or Twig for better templating.
-
----
-
-### 11. **PHP Security**
-
-- **SQL Injection**: Protecting against SQL Injection attacks using prepared statements.
-- **Cross-Site Scripting (XSS)**: Sanitizing input with `htmlspecialchars` to prevent XSS.
-- **Password Hashing**: Using `password_hash` and `password_verify` for secure password management.
+- Defining constants with `define()` and `const`.
+- Difference between constants and variables.
 
 ---
 
-### 12. **PHP Frameworks**
+### 08. **Magic Constant**
 
-- **Laravel**: Learn one of the most popular PHP frameworks for web development.
-- **CodeIgniter**: A lightweight framework for small to medium-sized projects.
-- **Symfony**: A robust framework for large-scale projects, with a flexible structure.
-
----
-
-### 13. **Deployment**
-
-- **Server Configuration**: Setting up your server (Apache, Nginx) for PHP applications.
-- **Version Control**: Using Git to manage and track project changes.
-- **Deployment Tools**: Deploying your PHP projects using platforms like Heroku, cPanel, or VPS.
+- Built-in constants like `__FILE__`, `__DIR__`, `__LINE__`.
+- Practical use cases for debugging.
 
 ---
 
-### 14. **Best Practices**
+### 09. **Operator**
 
-- **Writing Clean Code**: Learn how to write clean, maintainable PHP code.
-- **PHP Standards**: Follow PHP’s coding standards (PSR).
-- **Documentation**: Properly documenting your code using PHPDoc.
+- Arithmetic, comparison, logical, and string operators.
+- Special operators like `??` and `<=>`.
 
 ---
 
-## 🛠️ Technologies Used
+### 10. **Conditional Statement**
 
-- **PHP**: Latest version.
-- **Web Server**: XAMPP, WAMP, or PHP's built-in server.
-- **Database**: MySQL (optional for database connection examples).
+- `if`, `else`, `elseif`.
+- `match` (PHP 8+).
+- Real-world use cases.
+
+---
+
+### 11. **Switch Statement**
+
+- `switch...case` structure.
+- Difference between `switch` and `if...else`.
+
+---
+
+### 12. **Loops**
+
+- `for`, `while`, `do...while`, `foreach`.
+- Using `break` and `continue`.
+
+---
+
+### 13. **Functions**
+
+- Defining custom functions.
+- Parameters, default values, and return statements.
+- Variable scope (local, global, static).
+
+---
+
+### 14. **Built-in Functions**
+
+- String, array, math, and date/time functions.
+- Practical usage scenarios.
+
+---
+
+### 15. **Arrays**
+
+- Indexed, associative, and multidimensional arrays.
+- Common array functions (`array_merge`, `array_push`, `sort`, etc.).
+
+---
+
+### 16. **Superglobals**
+
+- `$_GET`, `$_POST`, `$_SERVER`, `$_FILES`, `$_SESSION`, `$_COOKIE`.
+- Example use cases for form handling.
+
+---
+
+### 17. **Regular Expressions**
+
+- Basics of regex in PHP (`preg_match`, `preg_replace`).
+- Common patterns for search and validation.
 
 ---
 
@@ -145,50 +145,71 @@ In this repository, you will learn PHP from the basics to a level where you can 
 
 ```bash
 Learn-PHP-Basic-Until-Understand/
-├── 1.Introduction-to-PHP/
-├── 2.Data-Type/
-  ├── boolean.php
-  ├── number.php/
-  ├── string.php/
-├── 3.Function/
-  ├── Built-in-function
-    ├── built-in-function-boolean.php/
-    ├── built-in-function-number.php/
-    ├── built-in-function-string.php/
-  ├── Function-in-php
+├── 01-Introduction-to-PHP/
+├── 02-Data-Type/
+├── 03-String/
+├── 04-Number/
+├── 05-Casting/
+├── 06-Math/
+├── 07-Constant/
+├── 08-Magic-Constant/
+├── 09-Operator/
+├── 10-Conditional-Statement/
+├── 11-Switch-Statement/
+├── 12-Loops/
+├── 13-Functions/
+├── 14-Built-in-Functions/
+├── 15-Arrays/
+├── 16-Superglobals/
+├── 17-Regular-Expressions/
 └── README.md
 ```
 
 ---
 
+## 🛠️ Tools & Extensions
+
+- **PHP**: Latest version.
+- **Web Server**: XAMPP, WAMP, or PHP's built-in server.
+- **VS Code Extensions**:
+
+  - [Code Runner](https://marketplace.visualstudio.com/items?itemName=formulahendry.code-runner) — Run PHP scripts directly in VS Code.
+  - [PHP Intelephense](https://marketplace.visualstudio.com/items?itemName=bmewburn.vscode-intelephense-client) — Provides PHP IntelliSense and autocompletion.
+
+---
+
 ## 📖 How to Use
 
-1. **Clone this repository**:
+1. **Clone the repository**:
 
    ```bash
    git clone https://github.com/username/Learn-PHP-Basic-Until-Understand.git
    ```
 
-2. **Run the code on a local server:**
+2. **Run the code**:
 
-   - Using XAMPP/WAMP or PHP's built-in server:
+   - Using PHP built-in server:
 
      ```bash
      php -S localhost:8000
      ```
 
-3. **Start from the 01-Data-Type folder and progress step by step.**
+   - Or using **Code Runner** in VS Code:
+
+     - Open the `.php` file.
+     - Press `Ctrl + Alt + N` (Windows/Linux) or `Control + Option + N` (Mac).
+
+3. **Follow the learning path** starting from `01-Introduction-to-PHP` and progress step by step.
 
 ---
 
 ## 🤝 Contributions
 
-We welcome contributions! If you'd like to add new examples or improve the documentation, feel free to create a pull request or open an issue.
+We welcome contributions! Feel free to submit a pull request or open an issue to add new examples or improve documentation.
 
 ---
 
 ## 💬 Feedback
 
-If you have any questions or suggestions, please open an issue or contact us at agungajipradana.business@gmail.com.
-
-Let's learn PHP until we truly understand it! 🎉
+If you have any questions or suggestions, please open an issue or contact:
+**[agungajipradana.business@gmail.com](mailto:agungajipradana.business@gmail.com)**
