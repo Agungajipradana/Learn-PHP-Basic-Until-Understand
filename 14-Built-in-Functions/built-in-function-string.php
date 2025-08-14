@@ -158,7 +158,7 @@ echo "Mengulang \$string sebanyak jumlah yang diinginkan: " . str_repeat($string
 echo "15. htmlspecialchars() : Mengonversi karakter spesial dalam HTML menjadi entitas HTML untuk mencegah XSS." . "\n\n";
 
 $string = "<h1>Halo World</h1>";
-echo"Mengonversi karakter spesial dalam HTML menjadi entitas HTML untuk mencegah XSS." . htmlspecialchars($string) . "\n\n"; // Output: &lt;h1&gt;Halo World&lt;/h1&gt;
+echo "Mengonversi karakter spesial dalam HTML menjadi entitas HTML untuk mencegah XSS." . htmlspecialchars($string) . "\n\n"; // Output: &lt;h1&gt;Halo World&lt;/h1&gt;
 
 /* Contoh Program Lengkap */
 echo "--------------------------------------------------- Contoh Program Lengkap ---------------------------------------------------" . "\n\n";
